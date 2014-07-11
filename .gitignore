@@ -1,3 +1,4 @@
 *.txt
 *.pyo
 venv/
+__pycache__/
