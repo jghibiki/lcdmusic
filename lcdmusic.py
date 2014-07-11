@@ -9,31 +9,12 @@ command = "echo"
 line1 = ""
 line2 = ""
 
-switch = True
+isRunning = True
 
-slide1a = "'(O.O)  (*.*)  ($.$) '"
-slide2a = "'(-.-)  (0.O)  (O.O) '"
-
-slide1b = "'*-*-*-*-*-*-*-*-*-*-'"
-slide2b = "'-*-*-*-*-*-*-*-*-*-*'"
-
-while True:
-	
-	message = blank
-	call(command + " " + message + " > " + outputLocation, shell=True)
-
-	if switch:
-		message = slide1a
-		message += slide1b
-		switch = False
-	else:
-		message = slide2a
-		message += slide2b
-		switch = True
-
-	call(command + " " + message + " > " + outputLocation, shell=True)
-
-	sleep(0.01)
+while isRunning:
+    message = "test"
+    call(command + " " + message + " > " + outputLocation, shell=True)
+    isRunning = False
 
 
 
